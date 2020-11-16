@@ -16,6 +16,7 @@ Baixe e instale o JDK 11 - [Download JDK 11](https://www.oracle.com/java/technol
     * Mantenha-se organizado!
 
 Baixe o Apache NetBeans - [Download Netbeans](https://netbeans.apache.org/download/index.html)
+
 Baixe e instale o PostgreSQL- [Download PostgreSQL](https://www.postgresql.org/download/)
 
     > Crie sua senha durante a instalação
