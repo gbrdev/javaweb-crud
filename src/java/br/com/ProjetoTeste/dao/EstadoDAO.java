@@ -25,19 +25,47 @@ public class EstadoDAO implements GenericDAO{
             this.conexao = ConnectionFactory.getConnection();
             System.out.println("Conectado com sucesso!");
         } catch (Exception ex) {
-            System.out.println("Problemas ao conectar no BD! ERRO: "
+            System.out.println("Problemas ao conectar no DB! ERRO: "
                         +ex.getMessage());
         }
     }
 
     @Override
     public Boolean cadastrar(Object objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Estado oEstado = (Estado) objeto;
+        Boolean retorno = false;
+        if (oEstado.getIdEstado() == 0) {
+            retorno = this.inserir(oEstado);
+        } else {
+            retorno = this.alterar(oEstado);
+        }
+        return retorno;
     }
 
     @Override
-    public Boolean inserir(Object objeto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Boolean inserir(Object objeto) { 
+        Estado oEstado = (Estado) objeto;
+        PreparedStatement stmt = null;
+        String sql = "insert into estado (nomeestado, siglaestado) values (?, ?)";
+        try {
+            stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, oEstado.getNomeEstado());
+            stmt.setString(2, oEstado.getSiglaEstado ());
+            stmt.execute();
+            return true;
+        } catch (SQLException ex) {
+            System.out.println("Problemas ao cadastrar a Estado! Erro: "+
+                    ex.getMessage());
+            return false;
+        }
+        finally{
+            try{
+                ConnectionFactory.closeConnection (conexao, stmt);
+            } catch(Exception ex){
+                System.out.println("Problemas ao fechar parametros de conexão! "
+                        + "Erro: "+ex.getMessage());
+            }
+        }
     }
 
     @Override
