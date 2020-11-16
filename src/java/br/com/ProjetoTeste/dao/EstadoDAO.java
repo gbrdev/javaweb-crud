@@ -75,7 +75,28 @@ public class EstadoDAO implements GenericDAO{
 
     @Override
     public Boolean excluir(int numero) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int idEstado = numero;
+        PreparedStatement stmt= null;
+
+        String sql = "delete from estado where idestado=?";
+        try {
+            stmt = conexao.prepareStatement(sql);
+            stmt.setInt(1, idEstado);
+            stmt.execute();
+            return true;
+        } catch (Exception ex) {
+            System.out.println("Problemas ao excluir o Estado! Erro: "
+                        +ex.getMessage());
+            return false;
+        }
+        finally {
+            try {
+                ConnectionFactory.closeConnection(conexao, stmt);
+            } catch(Exception ex){
+                System.out.println("Problemas ao fechar parametros de conexão! "
+                        + "Erro: "+ex.getMessage());
+            }
+        }
     }
 
     @Override

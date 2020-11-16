@@ -33,7 +33,7 @@
                 
                 <tr><td colspan="2" align="center">
                     <input type="submit" name="cadastrar" id="cadastrar" value="Cadastrar" />
-                    <input type="reset" name="limpar" id="limpar" value="Limpan" />
+                    <input type="reset" name="limpar" id="limpar" value="Limpar" />
                     </td>
                 </tr>
                 

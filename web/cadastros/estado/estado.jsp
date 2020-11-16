@@ -23,18 +23,16 @@
                         <td align="center">${estado.nomeEstado}</td>
                         <td align="center">${estado.siglaEstado}</td>
                         <td align="center"><a href=
-                        "${pageContext.request.contextPath}/EstadoExcluir?idEstado=
-                        ${estado.idEstado}">Excluir</a></td>
+                        "${pageContext.request.contextPath}/EstadoExcluir?idEstado=${estado.idEstado}">Excluir</a></td>
 
                         <td align="center"><a href=
-                        "${pageContext.request.contextPath}/EstadoCarregar?idEstado=
-                        ${estado.idEstado}">Alterar</a></td>
+                        "${pageContext.request.contextPath}/EstadoCarregar?idEstado=${estado.idEstado}">Alterar</a></td>
                     </tr>
                 </c:forEach>
             </tbody>
         </table>
         <div align="center">
-            <a href="${pageContext.request.contextPath}/EstadoNovo">Novo</a>
+            <a href="${pageContext.request.contextPath}/EstadoNovo">Novo</a> | 
             <a href="index.jsp">Voltar à Página Inicial</a>
         </div>
 
