@@ -1,37 +1,29 @@
-## Welcome to GitHub Pages
+# Simple CRUD Java Web
 
-You can use the [editor on GitHub](https://github.com/gbrdev/javaweb-crud/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Faça o clone
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```shell
+git clone https://github.com/gbrdev/javaweb-crud.git
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Softwares utilizados no projeto
 
-### Jekyll Themes
+Baixe e instale o JDK 11 - [Download JDK 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/gbrdev/javaweb-crud/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+    > Baixe a versão compactada
+    > Crie uma pasta em um local raiz do seu sistema
+    > Extraia o conteúdo dentro da pasta
+    * Mantenha-se organizado!
 
-### Support or Contact
+Baixe o Apache NetBeans - [Download Netbeans](https://netbeans.apache.org/download/index.html)
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Baixe e instale o PostgreSQL- [Download PostgreSQL](https://www.postgresql.org/download/)
+
+    > Crie sua senha durante a instalação
+    > Instale o PGAdmin
+    > Abra seu PGAdmin
+    > Crie a databse: projetocrud
+    > Execute os comandos do SQL => database.sql
+    > Condigure seu usuário e senha postgresql na Camada => Utils/ConnectionFactory.java
+
+<hr>
