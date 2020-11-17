@@ -25,5 +25,3 @@ Baixe e instale o PostgreSQL- [Download PostgreSQL](https://www.postgresql.org/d
     > Crie a databse: projetocrud
     > Execute os comandos do SQL => database.sql
     > Condigure seu usuário e senha postgresql na Camada => Utils/ConnectionFactory.java
-
-<hr>
